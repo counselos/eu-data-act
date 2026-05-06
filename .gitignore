@@ -1,0 +1,8 @@
+workspace/
+*.pyc
+__pycache__/
+.DS_Store
+*.docx
+!assets/templates/_examples/*.docx
+!assets/styles/*.docx
+docs/
