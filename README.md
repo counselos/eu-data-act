@@ -3,15 +3,16 @@
 A workflow-oriented skill for lawyers advising on the EU Data Act
 (Regulation (EU) 2023/2854).
 
-The skill produces lawyer-style Word output for classification,
-drafting, lookup, analysis, and audit tasks, citing verbatim
+The skill produces lawyer-style Word output across five workflows —
+classification, drafting, lookup, analysis, and audit — citing verbatim
 from bundled source texts (Regulation 2023/2854 and EC FAQ v1.4) and
 pointing to the Commission's model contractual terms (Recommendation,
 19 November 2025) for direct consultation.
 
 **Author:** Ryan Malek
 **Feedback / questions:** [LinkedIn](https://www.linkedin.com/in/theryanmalek/)
-**Distributed via:** GitHub and Lawvable
+**Distributed via:** Github, Counselcoder.com, Lawvable
+**Project site:** [counselcoder.com](https://counselcoder.com)
 **License:** AGPL-3.0 (see `LICENSE`)
 **This is not legal advice.** See `LICENSE` for the full disclaimer.
 
@@ -20,13 +21,15 @@ pointing to the Commission's model contractual terms (Recommendation,
 ## Who this is for
 
 In-house counsel and external practitioners advising on EU Data Act
-compliance, including industrial IoT, automotive, medical device,
+compliance — including industrial IoT, automotive, medical device,
 SaaS, financial services, and cloud clients.
 
 The skill assumes the user is a qualified lawyer. It does not explain
 GDPR basics, what SaaS means, or other concepts a lawyer already knows.
 
 ## What it does
+
+Five workflows, each with its own reference file:
 
 | Mode      | Trigger                                                                         | Output (Word)                                              |
 |-----------|---------------------------------------------------------------------------------|------------------------------------------------------------|
@@ -38,8 +41,8 @@ GDPR basics, what SaaS means, or other concepts a lawyer already knows.
 
 The skill always:
 
-- Captures **per-matter facts** (side advised, sector, member state) rather than relying on global config.
-- Surfaces a **sectoral overlay warning** when facts trigger automotive / medical / DORA / NIS2 / AI Act / other sectoral law.
+- Asks for matter-specific facts (side advised, sector, member state) before drafting, rather than relying on global config.
+- Surfaces a **sectoral overlay warning** when facts trigger automotive / medical / DORA / NIS2 / AI Act / CRA / other sectoral law.
 - Cites **verbatim** from `assets/source/*` (no paraphrase from memory).
 - Frames the **Commission FAQ as non-authoritative** in every output that relies on it.
 - Appends a short **disclaimer** to every Word output.
@@ -47,7 +50,7 @@ The skill always:
 ## What it does not do
 
 - **No legal advice.** The skill produces drafts the lawyer reviews.
-- **No sectoral lex specialis.** Adjacent regimes (Reg. 2018/858, MDR, DORA, NIS2, AI Act, etc.) are flagged, not covered.
+- **No sectoral lex specialis.** Adjacent regimes (Reg. 2018/858, MDR, DORA, NIS2, AI Act, CRA, etc.) are flagged, not covered.
 - **No member-state implementing law.** Skill points to Art. 37 competent authorities; national overlays must be checked independently.
 - **No multilingual output.** English only. Use your own LLM for translation.
 - **No automatic source updates.** The skill is a versioned static snapshot. Currency is checked through the verified-as-of stamp and new Lawvable releases.
@@ -171,7 +174,9 @@ data-act/
 ├── assets/
 │   ├── source/             # Verbatim regulation, FAQ; SCC pointer
 │   ├── templates/          # Drafting starters (md → Word via pandoc)
-│   └── styles/             # lawyer-reference.docx for pandoc styling
+│   ├── styles/             # lawyer-reference.docx for pandoc styling
+│   ├── decision-trees/     # Walkable Q&A
+│   └── examples/           # Worked examples
 └── scripts/                # Python helpers
 ```
 
@@ -186,6 +191,6 @@ The first three are redistributed under their respective public-information regi
 
 ## Versioning
 
-Semantic versioning. Major version bump on substantive FAQ revisions, regulation amendments, or scope changes. Minor for added templates and references. Patch for typos and clarifications.
+Semantic versioning. Major version bump on substantive FAQ revisions, regulation amendments, or scope changes. Minor for added templates, examples, references. Patch for typos and clarifications.
 
 This release: v1.0.0. See `CHANGELOG.md`.
