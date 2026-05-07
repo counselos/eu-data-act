@@ -65,14 +65,14 @@ cd ~/data-act-skill
 bash install.sh
 ```
 
-The script symlinks the folder to `~/.claude/skills/data-act/` (auto-trigger by description) and adds `~/.claude/commands/data-act.md` (explicit `/data-act` slash command). Set `COPY=1` to install a fixed copy instead of symlinks.
+The script symlinks the folder to `~/.claude/skills/data-act-ryan-malek/` (auto-trigger by description) and adds `~/.claude/commands/data-act-ryan-malek.md` (explicit `/data-act-ryan-malek` slash command). Set `COPY=1` to install a fixed copy instead of symlinks.
 
 Verify with `bash install.sh --check`. Uninstall with `bash install.sh --uninstall`.
 
 ### Other platforms
 
 - **Claude Agent SDK** — same folder layout; register via the SDK's skill directory.
-- **Codex CLI** — no native skill discovery; either `cd` into the folder when running `codex`, or open the prompt with `Use the skill at /path/to/data-act/SKILL.md ...`.
+- **Codex CLI** — no native skill discovery; either `cd` into the folder when running `codex`, or open the prompt with `Use the skill at /path/to/data-act-ryan-malek/SKILL.md ...`.
 - **No agent at all** — open templates and reference files directly. Python scripts run standalone.
 
 ### Dependencies
@@ -87,7 +87,7 @@ brew install pandoc
 sudo apt-get install pandoc
 ```
 
-Word export uses pandoc with a reference template (`assets/styles/lawyer-reference.docx`) for proper Calibri / navy heading / page-number / table-grid styling. Without pandoc, `/data-act` works for chat answers and lookups but the Word export step fails with a clear install message.
+Word export uses pandoc with a reference template (`assets/styles/lawyer-reference.docx`) for proper Calibri / navy heading / page-number / table-grid styling. Without pandoc, `/data-act-ryan-malek` works for chat answers and lookups but the Word export step fails with a clear install message.
 
 **Python** (3.10+) and these packages (only when scripts run):
 
@@ -104,12 +104,12 @@ Two invocation styles, both supported:
 ### Slash command (explicit)
 
 ```
-/data-act                                      ← shows the mode menu
-/data-act classify [offering description]      ← classify mode
-/data-act draft [what to draft]                ← draft mode
-/data-act lookup [Art. 25(2)(a)]               ← verbatim lookup
-/data-act analyze [scenario]                   ← apply law to facts
-/data-act audit [existing offering]            ← gap analysis
+/data-act-ryan-malek                                      ← shows the mode menu
+/data-act-ryan-malek classify [offering description]      ← classify mode
+/data-act-ryan-malek draft [what to draft]                ← draft mode
+/data-act-ryan-malek lookup [Art. 25(2)(a)]               ← verbatim lookup
+/data-act-ryan-malek analyze [scenario]                   ← apply law to facts
+/data-act-ryan-malek audit [existing offering]            ← gap analysis
 ```
 
 ### Auto-trigger (implicit)
@@ -131,9 +131,9 @@ There is no setup. The skill is zero-config out of the box.
 **The deliverable lives in chat by default.** After the chat answer, the skill offers to export to Word. Word files are saved to the lawyer's current working directory under `./Data Act outputs/{date}_{type}.docx` by default — never inside the skill folder. The lawyer can persist a different location with:
 
 ```
-/data-act save-here          # always save to current folder, don't ask
-/data-act save-to-desktop    # always save to ~/Desktop/Data Act outputs/
-/data-act ask-where-to-save  # ask each time (default)
+/data-act-ryan-malek save-here          # always save to current folder, don't ask
+/data-act-ryan-malek save-to-desktop    # always save to ~/Desktop/Data Act outputs/
+/data-act-ryan-malek ask-where-to-save  # ask each time (default)
 ```
 
 ## Update model
@@ -169,7 +169,7 @@ data-act/
 ├── install.sh              # One-command install for Claude Code
 ├── config.json             # output_dir preference (cwd / desktop / custom path)
 ├── commands/
-│   └── data-act.md         # Slash-command definition (/data-act)
+│   └── data-act-ryan-malek.md   # Slash-command definition (/data-act-ryan-malek)
 ├── references/             # Knowledge layer, read on demand
 ├── assets/
 │   ├── source/             # Verbatim regulation, FAQ; SCC pointer

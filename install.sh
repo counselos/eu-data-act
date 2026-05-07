@@ -7,8 +7,8 @@
 #   bash install.sh --check     # show install status without changing anything
 #
 # What it does:
-#   1. Symlinks this folder to ~/.claude/skills/data-act/ (so the skill auto-triggers)
-#   2. Symlinks commands/data-act.md to ~/.claude/commands/data-act.md (so /data-act works)
+#   1. Symlinks this folder to ~/.claude/skills/data-act-ryan-malek/ (so the skill auto-triggers)
+#   2. Symlinks commands/data-act-ryan-malek.md to ~/.claude/commands/data-act-ryan-malek.md (so /data-act-ryan-malek works)
 #
 # The script uses symlinks so that updates to this folder propagate immediately.
 # To install a fixed copy instead, set COPY=1 in the environment.
@@ -16,9 +16,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SKILL_DEST="${HOME}/.claude/skills/data-act"
-CMD_DEST="${HOME}/.claude/commands/data-act.md"
-CMD_SRC="${SCRIPT_DIR}/commands/data-act.md"
+SKILL_DEST="${HOME}/.claude/skills/data-act-ryan-malek"
+CMD_DEST="${HOME}/.claude/commands/data-act-ryan-malek.md"
+CMD_SRC="${SCRIPT_DIR}/commands/data-act-ryan-malek.md"
 
 mode="${1:-install}"
 
@@ -168,10 +168,10 @@ echo "Verify install state any time with:"
 echo "  bash $SCRIPT_DIR/install.sh --check"
 echo
 echo "Use in Claude Code:"
-echo "  /data-act classify [your offering description]"
-echo "  /data-act draft [what to draft]"
-echo "  /data-act lookup [Art. 25(2)(a)]"
-echo "  /data-act analyze [scenario]"
-echo "  /data-act audit [existing offering]"
+echo "  /data-act-ryan-malek classify [your offering description]"
+echo "  /data-act-ryan-malek draft [what to draft]"
+echo "  /data-act-ryan-malek lookup [Art. 25(2)(a)]"
+echo "  /data-act-ryan-malek analyze [scenario]"
+echo "  /data-act-ryan-malek audit [existing offering]"
 echo
 echo "Or just describe your task in chat — the skill auto-triggers on Data Act phrasing."

@@ -1,5 +1,5 @@
 ---
-name: data-act
+name: data-act-ryan-malek
 description: EU Data Act (Regulation (EU) 2023/2854) skill for lawyers. Use when the user asks about Data Act classification, drafting, lookup, analysis, or audit. Triggers include "Data Act", "Regulation 2023/2854", "connected product", "related service", "data processing service", "DPS switching", "Article 3(2) pre-contract", "Article 25 contract", "trade-secret handbrake", "international government access", "Chapter VI cloud switching", "Article 50 timeline", "FAQ Q22a", "data holder", "exportable data", "functional equivalence", "Art. 4(10) competing product", and similar EU Data Act phrases. The skill produces lawyer-style Word output and cites verbatim from bundled regulation and FAQ source texts.
 ---
 
