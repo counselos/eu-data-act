@@ -11,8 +11,7 @@ pointing to the Commission's model contractual terms (Recommendation,
 
 **Author:** Ryan Malek
 **Feedback / questions:** [LinkedIn](https://www.linkedin.com/in/theryanmalek/)
-**Distributed via:** Github, Counselcoder.com, Lawvable
-**Project site:** [counselcoder.com](https://counselcoder.com)
+**Distributed via:** GitHub and Lawvable
 **License:** AGPL-3.0 (see `LICENSE`)
 **This is not legal advice.** See `LICENSE` for the full disclaimer.
 
