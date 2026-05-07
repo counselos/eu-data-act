@@ -3,8 +3,8 @@
 A workflow-oriented skill for lawyers advising on the EU Data Act
 (Regulation (EU) 2023/2854).
 
-The skill produces lawyer-style Word output across five workflows —
-classification, drafting, lookup, analysis, and audit — citing verbatim
+The skill produces lawyer-style Word output for classification,
+drafting, lookup, analysis, and audit tasks, citing verbatim
 from bundled source texts (Regulation 2023/2854 and EC FAQ v1.4) and
 pointing to the Commission's model contractual terms (Recommendation,
 19 November 2025) for direct consultation.
@@ -28,8 +28,6 @@ The skill assumes the user is a qualified lawyer. It does not explain
 GDPR basics, what SaaS means, or other concepts a lawyer already knows.
 
 ## What it does
-
-Five workflows, each with its own reference file:
 
 | Mode      | Trigger                                                                         | Output (Word)                                              |
 |-----------|---------------------------------------------------------------------------------|------------------------------------------------------------|
@@ -174,9 +172,7 @@ data-act/
 ├── assets/
 │   ├── source/             # Verbatim regulation, FAQ; SCC pointer
 │   ├── templates/          # Drafting starters (md → Word via pandoc)
-│   ├── styles/             # lawyer-reference.docx for pandoc styling
-│   ├── decision-trees/     # Walkable Q&A
-│   └── examples/           # Worked examples
+│   └── styles/             # lawyer-reference.docx for pandoc styling
 └── scripts/                # Python helpers
 ```
 
@@ -191,6 +187,6 @@ The first three are redistributed under their respective public-information regi
 
 ## Versioning
 
-Semantic versioning. Major version bump on substantive FAQ revisions, regulation amendments, or scope changes. Minor for added templates, examples, references. Patch for typos and clarifications.
+Semantic versioning. Major version bump on substantive FAQ revisions, regulation amendments, or scope changes. Minor for added templates and references. Patch for typos and clarifications.
 
 This release: v1.0.0. See `CHANGELOG.md`.

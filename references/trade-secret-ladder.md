@@ -127,7 +127,4 @@ The skill flags these in any refusal-letter draft it produces:
 
 ## See also
 
-- `references/safety-security.md` — distinct refusal grounds under Art. 4(2)
-- `references/often-missed.md` — interaction with Arts. 4(10), 4(13), 5(3)
-- `assets/decision-trees/trade-secret-refusal.md` — walkable Q&A
-- `assets/examples/trade-secret-refusal-defensible.md` and `_not-defensible.md` — worked examples
+- `references/gotchas.md` — Art. 4(2) safety/security cumulative conditions; interaction with Arts. 4(10), 4(13), 5(3)

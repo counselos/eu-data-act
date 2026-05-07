@@ -46,15 +46,25 @@ When per-matter facts contain any of the following, surface the corresponding ov
 
 > The facts indicate a NIS2 context (essential or important entity, or supplier into one). Directive (EU) 2022/2555 cybersecurity obligations interact with the Data Act Art. 4(2) safety/security carve-out and with trade-secret restrictions on disclosing data that could undermine cybersecurity. This Skill does not cover NIS2. The lawyer must independently verify.
 
-### AI Act
+### Cyber Resilience Act — CRA
 
-**Triggers:** AI system, AI model, GPAI, foundation model, high-risk AI, biometric, AI system provider, AI Act, Annex III, Annex IV, conformity assessment for AI.
+**Triggers:** connected product with a software component, IoT, smart device, software product placed on the EU market, CRA, cybersecurity-by-design, vulnerability handling, secure update channel.
 
-**Overlay:** Regulation (EU) 2024/1689 (AI Act). Training-data provenance, transparency, and recordkeeping obligations may interact with related-service data classifications and with trade-secret protections.
+**Overlay:** Regulation (EU) 2024/2847 (Cyber Resilience Act). Imposes cybersecurity-by-design, vulnerability handling, and conformity assessment obligations. It constrains how Data Act Art. 4 real-time access is implemented, including authentication, encryption, and secure update channels. Build CRA and Data Act compliance together.
 
 **Warning text:**
 
-> The facts indicate an AI Act context. Regulation (EU) 2024/1689 obligations on data provenance, transparency, technical documentation, and high-risk system recordkeeping interact with Data Act related-service data classifications and trade-secret protections. This Skill does not cover the AI Act. The lawyer must independently verify.
+> The facts indicate a Cyber Resilience Act context. Regulation (EU) 2024/2847 imposes cybersecurity-by-design, vulnerability handling, and conformity assessment obligations that constrain how Data Act real-time access is implemented, including authentication, encryption, and secure update channels. This Skill does not cover the CRA. The lawyer must build CRA and Data Act compliance together and independently verify the CRA position.
+
+### AI Act
+
+**Triggers:** AI system, AI model, GPAI, foundation model, high-risk AI, biometric, AI system provider, AI Act, Annex III, Annex IV, conformity assessment for AI, onboard tactical AI, predictive AI, automation AI, decision-support AI.
+
+**Overlay:** Regulation (EU) 2024/1689 (AI Act). Training-data provenance, transparency, and recordkeeping obligations may interact with related-service data classifications and with trade-secret protections. Any onboard tactical, predictive, automation, or decision-support AI is potentially high-risk and may collide with Data Act trade-secret protection through training-data documentation requirements.
+
+**Warning text:**
+
+> The facts indicate an AI Act context. Regulation (EU) 2024/1689 obligations on data provenance, transparency, technical documentation, and high-risk system recordkeeping interact with Data Act related-service data classifications and trade-secret protections. Onboard tactical, predictive, automation, or decision-support AI may be high-risk and may collide with Data Act trade-secret protection through training-data documentation requirements. This Skill does not cover the AI Act. The lawyer must independently verify.
 
 ### eIDAS / digital identity
 
@@ -96,7 +106,7 @@ When per-matter facts contain any of the following, surface the corresponding ov
 
 ## Member-state implementing law
 
-Independent of any sector, member-state implementing law and competent-authority designations under Article 37 always apply. The skill always notes:
+Independent of any sector, member-state implementing law and competent-authority designations under Article 37 always apply. Member States designate competent authorities and may set their own penalty regimes. The skill does not enumerate Member State law. Verify per-Member-State before relying on penalty figures. Do not enumerate specific Member State penalty amounts because they change. The skill always notes:
 
 > Member-state implementing law and competent-authority designations under Article 37 are not covered by this Skill. The lawyer must verify the position in the relevant member state.
 

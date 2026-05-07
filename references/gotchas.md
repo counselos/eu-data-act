@@ -1,136 +1,138 @@
 # Gotchas
 
-High-signal failure modes the skill must guard against. This is the first reference file Claude reads before producing any output. Update as new failure modes are observed.
+High-signal failure modes the skill must guard against. Keep this file reactive and scannable.
 
----
-
-## 0a. Templates are filled, not rewritten
-
-When customising a template from `assets/templates/`, replace `[INSERT — ...]` markers and add matter-specific paragraphs at marked extension points. Do not regenerate sections that already exist. Rewriting templates breaks consistency across matters and burns tokens.
-
-## 0b. Density before length
-
-Length budgets are advisory. Density is the rule: every paragraph must do work the previous paragraph didn't.
-
-## 0c. Demote to lookup when the question is narrow
-
-A request like "what's the timing?" wants a paragraph plus a date table, not a memo subsection. If the question is single-issue and answerable in under 250 words, demote to lookup mode regardless of the mode the lawyer initially picked.
-
-## 1. Article 2 numbering trap
+## Article 2 numbering trap
 
 The numbering inside Article 2 is non-obvious. These five definitions are commonly miscited:
 
-- **(30) "customer"** — NOT switching, NOT exportable data
-- **(32) "digital assets"** — NOT exportable data
-- **(34) "switching"** — the actual switching definition
-- **(37) "functional equivalence"**
-- **(38) "exportable data"** — for the purpose of Articles 23 to 31 and Article 35
+- **(30) "customer"** - NOT switching, NOT exportable data.
+- **(32) "digital assets"** - NOT exportable data.
+- **(34) "switching"** - the actual switching definition.
+- **(37) "functional equivalence"**.
+- **(38) "exportable data"** - for Articles 23 to 31 and Article 35.
 
 Always verify the point number against `assets/source/regulation-2023-2854.md` before citing.
 
-## 2. Article 31 vs Article 32 confusion
+## Article 31 vs Article 32 confusion
 
-These articles are easy to swap because they sound related and are adjacent:
-
-- **Article 31** — "Specific regime for certain data processing services" — the lighter regime for custom-built and non-production test/beta DPS.
-- **Article 32** — "International governmental access and transfer" — the third-country access regime for non-personal data.
+- **Article 31** - "Specific regime for certain data processing services": lighter regime for custom-built and non-production test/beta DPS.
+- **Article 32** - "International governmental access and transfer": third-country access regime for non-personal data.
 
 When the user says "the cloud third-country access article," they mean 32, not 31.
 
-## 3. Functional equivalence is IaaS-only
+## Functional equivalence is IaaS-only
 
-Article 30 splits its obligations:
+- **30(1) functional equivalence** - IaaS only.
+- **30(2) open interfaces** - PaaS and SaaS.
+- **30(3) interoperability standards** - PaaS and SaaS, with a 12-month compatibility horizon after standards are published.
 
-- **30(1) functional equivalence** — applies only to IaaS (services limited to infrastructural elements without operating services / software / applications).
-- **30(2) open interfaces** — applies to PaaS and SaaS.
-- **30(3) interoperability standards** — applies to PaaS and SaaS, with a 12-month compatibility horizon after standards are published.
+Do not assert SaaS providers owe functional equivalence. They do not. See FAQ Q58a.
 
-A common error is asserting SaaS providers owe functional equivalence. They do not. (FAQ Q58a.)
+## DPS time windows are distinct
 
-## 4. The DPS time windows are three distinct periods
+- **Notice period** - up to 2 months from the customer's switching request.
+- **Mandatory transitional period** - 30 calendar days, starting after the notice period ends.
+- **Minimum retrieval period** - at least 30 calendar days, starting after the transitional period ends.
+- **Technical-infeasibility extension** - provider must justify in writing within 14 working days; alternative transitional period is up to 7 months.
+- **Customer extension right** - customer may extend the transitional period once.
 
-Lawyers and engineers routinely conflate these:
+## Reduced switching charges window closes 12 January 2027
 
-- **Notice period** — ≤ 2 months from the customer's switching request (Art. 25(2)(d)).
-- **Mandatory transitional period** — 30 calendar days, starting *after* the notice period ends (Art. 25(2)(a)).
-- **Minimum retrieval period** — ≥ 30 calendar days, starting after the transitional period ends (Art. 25(2)(g)).
-
-Plus the technical-infeasibility extension: provider must justify in writing within **14 working days** of the request; alternative transitional period ≤ **7 months** (Art. 25(4)). And the customer's right to extend the transitional period once (Art. 25(5)).
-
-## 5. Reduced switching charges window closes 12 January 2027 (not 2025)
-
-- **11 January 2024 → 12 January 2027** — reduced switching charges allowed; cannot exceed direct switching cost (Art. 29(2)).
-- **From 12 January 2027** — no switching charges for the switching process at all (Art. 29(1)).
+- **11 January 2024 to 12 January 2027** - reduced switching charges allowed; cannot exceed direct switching cost.
+- **From 12 January 2027** - no switching charges for the switching process.
 
 Standard service fees and early-termination penalties remain permitted in either window.
 
-## 6. Article 50 has four dates, not three
+## Article 50 cohort dates
 
-- **12 September 2025** — general application; Chapter II live; Chapter VI applies in full to all DPS contracts (new and pre-existing), with no grandfather; Chapter IV applies to B2B data-sharing contracts concluded after this date.
-- **12 September 2026** — Article 3(1) "by design" applies to connected products and related services placed on the market *after* this date.
-- **12 January 2027** — no DPS switching charges (per Art. 29(1)).
-- **12 September 2027** — Chapter IV only. Chapter IV applies to pre-existing B2B data-sharing contracts (concluded on or before 12 September 2025) that are of indefinite duration OR due to expire ≥ 10 years from 11 January 2024. This grandfather does NOT extend any Chapter VI deadline.
+| Date | Trigger | Source |
+|------|---------|--------|
+| **12 September 2025** | General application date. Chapter II rights start. Chapter VI applies in full to all DPS contracts with no grandfather. Chapter III data-availability obligations from this date forward. Chapter IV applies to B2B data-sharing contracts concluded after this date. | Art. 50 |
+| **12 September 2026** | Article 3(1) access by design applies to connected products and related services placed on the market after this date. | Art. 50 |
+| **12 January 2027** | All switching charges prohibited for the switching process itself. | Art. 29(1) |
+| **12 September 2027** | Chapter IV only. Applies to pre-existing B2B data-sharing contracts concluded on or before 12 September 2025 that are indefinite or expire at least 10 years from 11 January 2024. | Art. 50 |
 
-Missing the 12 September 2027 date is a frequent error for long-running B2B data-sharing contracts. Applying it to Chapter VI DPS switching obligations is also wrong.
+Do not apply the 12 September 2027 grandfather to Chapter VI DPS switching obligations.
 
-## 7. Article 3(1) does NOT mandate direct access for everything
+## Article 3(1) does not mandate direct access for everything
 
-Article 3(1) requires direct access "where relevant and technically feasible." The Commission's FAQ Q22 confirms this gives the manufacturer significant discretion. Indirect access on a simple electronic request (Art. 4(1)) is sufficient where direct is not chosen or not feasible. Stating that direct access is mandatory is wrong.
+Article 3(1) requires direct access only "where relevant and technically feasible." FAQ Q22 confirms manufacturer discretion. Indirect access on simple electronic request can be sufficient.
 
-## 8. Data Act is NOT a GDPR Article 6 legal basis
+## Data Act is not a GDPR Article 6 legal basis
 
-When the user (in the Data Act sense) is not the data subject, the Data Act does not provide a GDPR Article 6 legal basis for disclosing personal data (Recital 7; FAQ Q25a). The data holder must establish a basis separately or anonymise the data. This applies in the common employer-requesting-employee-data scenario.
+When the user is not the data subject, the Data Act does not provide a GDPR Article 6 legal basis for disclosing personal data. The data holder must establish a separate basis or anonymise the data.
 
-## 9. Article 1(5) — GDPR prevails
+## GDPR prevails on conflict
 
-In any conflict between the Data Act and the GDPR concerning personal data, the GDPR prevails. Outputs that treat the Data Act as overriding GDPR are wrong.
+In any conflict between the Data Act and the GDPR concerning personal data, GDPR prevails under Art. 1(5). See `references/gdpr-overlay.md` for depth.
 
-## 10. Trade-secret refusal is a three-step ladder
+## Trade-secret ladder cross-check
 
-Refusal on trade-secret grounds is exceptional. The default is disclosure with confidentiality measures.
+For trade-secret withholding or refusal, use `references/trade-secret-ladder.md`. Do not skip the ladder.
 
-1. **Article 4(6)** — identify trade secrets, mark in metadata, agree proportionate technical and organisational measures. Default: disclose.
-2. **Article 4(7)** — withhold or suspend if no agreement or if user fails to implement / undermines confidentiality. Substantiated in writing; notify competent authority.
-3. **Article 4(8)** — exceptional case-by-case refusal where the trade-secret holder demonstrates highly likely "serious economic damage" (Recital 31 defines this as "serious *and irreparable* economic loss"), based on objective elements: enforceability in third countries, level of confidentiality, uniqueness/novelty, cybersecurity impact.
+## The Commission FAQ is not authoritative
 
-Articles 5(9) to 5(11) mirror this for third-party requests. Skipping straight to refusal without first attempting Step 1 is procedurally defective.
+Frame FAQ reliance as the Commission's interpretation, not binding.
 
-## 11. The Commission FAQ is not authoritative
+## Article 5(3) - DMA gatekeepers are excluded as third parties
 
-Outputs must frame any reliance on the FAQ as "the Commission's interpretation, not binding." The FAQ itself states this on its first pages.
+DMA gatekeepers cannot be eligible third parties under Article 5. Third-party transfer flows should include a recipient attestation that it is not a designated gatekeeper.
 
-## 12. Article 5(3) — DMA gatekeepers are excluded as third parties
+## Article 4(10) - user non-compete and no insights about the manufacturer
 
-Undertakings designated as gatekeepers under Regulation 2022/1925 cannot be eligible third parties under Article 5. They cannot solicit or commercially incentivise data sharing, and the data holder is not required to ship data to them on user request. Easy to miss and may matter in B2B engagements.
+The user may not use requested data to develop a competing connected product, share with a third party with that intent, or derive insights about the manufacturer's or data holder's economic situation, assets, or production methods.
 
-## 13. Article 4(10) — user non-compete and no insights about the manufacturer
+## Article 4(13) - data holder needs a contract to use non-personal data
 
-The user may not use the data to develop a connected product that competes with the one the data came from, share with a third party with that intent, or derive insights about the manufacturer's economic situation, assets, or production methods. This protects the data holder side and is often forgotten when drafting access flows.
+A data holder may use readily available non-personal data only on the basis of a contract with the user and may not derive insights that could undermine the user's commercial position.
 
-## 14. Article 4(13) — data holder needs a contract to use non-personal data
+## Sectoral lex specialis may pre-empt or override
 
-A data holder may use readily available non-personal data only on the basis of a contract with the user, and may not derive insights about the user's economic situation that could undermine the user's commercial position. Internal product analytics drawn from customer telemetry need a contractual basis — they are not implicit from the sale.
+Sectoral instruments may impose stricter, additional, or alternative obligations. Use `references/sectoral-overlays.md` for the warning gate.
 
-## 15. Sectoral lex specialis may pre-empt or override
+## Member-state implementing law and competent authority vary
 
-The Data Act is horizontal. Sectoral instruments — Reg. 2018/858 (motor vehicles), Reg. 2017/745 (medical devices), DORA (Reg. 2022/2554), NIS2 (Dir. 2022/2555), the AI Act (Reg. 2024/1689), and others — may impose stricter, additional, or alternative obligations. The skill flags but does not cover sectoral overlays. Always check.
+Article 37 designates competent authorities at member-state level. Penalty regimes and enforcement posture can vary; verify member-state law before relying on penalty figures.
 
-## 16. Member-state implementing law and competent authority vary
+## "Without undue delay" has no numeric SLA
 
-Article 37 designates competent authorities at member-state level. Each member state may also adopt implementing measures. The skill points to Art. 37 and the Commission's published list; it does not enumerate national designations.
+The Regulation does not set a numeric time limit for Chapter II responses. Do not invent a day-count deadline.
 
-## 17. "Without undue delay" has no numeric SLA
+## Prototypes are out of scope, but early commercial products are not
 
-The Regulation does not set a numeric time limit for Chapter II responses. Recital 21 and FAQ Q22a require proactive automation. Outputs that quote a specific number of days as "the Article 4 deadline" are wrong; the right answer is "without undue delay, with proactive automation expected."
+FAQ Q7 excludes un-finalised prototypes that have not completed manufacturing. A first commercial release is not out of scope on that basis.
 
-## 18. Prototypes are out of scope (FAQ Q7), but "early-stage commercial product" is not
+## "Customised tenant" is not "custom-built service"
 
-Only un-finalised prototypes that have not completed manufacturing are out of scope under FAQ Q7. A first commercial release is in scope.
+A multi-tenant SaaS with customer-specific configuration is not "custom-built" under Article 31(1).
 
-## 19. "Customised tenant" ≠ "custom-built service" under Art. 31(1)
+## Article 4(2) safety/security restriction is narrow
 
-A multi-tenant SaaS with customer-specific configuration is not "custom-built" under Article 31(1). Custom-built means the engineering effort is uniquely for that one customer and the service is not offered at broad commercial scale via the catalogue.
+Art. 4(2) lets the data holder contractually restrict or prohibit access, use, or further sharing where processing the data could undermine **security requirements of the connected product**, as laid down by Union or national law, resulting in a serious adverse effect on the health, safety, or security of natural persons. On refusal, notify the Art. 37 competent authority.
 
-## 20. Word is the durable artifact, offered after the chat answer
+Do not present Art. 4(2) as a five-item checklist. The statutory hooks are: (a) a product-security requirement under Union or national law, (b) processing that would undermine it, (c) serious adverse effect on natural persons, and the procedural notification duty on refusal. Wrap the analysis around the regulation's words, not a manufactured list.
 
-The chat answer is the default deliverable (per orchestrator step 8). After the chat answer, offer Word export (per orchestrator step 9). Word is rendered via `scripts/render_docx.py`. Do not produce raw markdown as a deliverable — the lawyer cannot edit or send markdown. If the lawyer declines the Word offer, the chat answer stands. If the lawyer accepts, render to .docx and print the absolute path. Markdown in `assets/templates/` is internal authoring only — never paste raw template markdown into the chat as a final deliverable.
+Do not conflate Art. 4(2) with Art. 1(6). Art. 4(2) is about **product-security requirements** under sectoral or horizontal product law (medical device cybersecurity, automotive cybersecurity, etc.). Art. 1(6) is about **Member State competence over public security, defence and national security**. Different scopes, different operative consequences.
+
+## Chapter VI does not catch every connected-product service
+
+Chapter VI applies to "data processing services" as defined in Art. 2(8): a service enabling on-demand network access to a shared, scalable, elastic pool of computing resources. Cloud / edge / IaaS / PaaS / SaaS-style offerings.
+
+A telemetry portal, fleet-ops dashboard, or diagnostic backend bundled with a connected product is usually a **related service** (Art. 2(6)), not a DPS. Same offering can be both, but it is not automatic. Test Art. 2(8) against stated facts before applying Chapter VI switching, fees, or international-access rules.
+
+## Often-missed provisions
+
+- **Article 11** - technical protection measures may back confidentiality controls; users and third parties must not circumvent them.
+- **Article 25(5)** - customer may extend the transitional period once.
+- **Article 25(4)** - provider has a 14-working-day window to justify technical infeasibility.
+- **Article 26(b)** - DPS public register of data structures, formats, standards, and open interoperability specifications.
+- **Article 28(2)** - website URL must be listed in every DPS contract.
+- **Article 29(4)-(6)** - pre-contract and public fee disclosure during the reduced-charges window.
+- **Article 31** - custom-built and test/beta carve-outs have different scope and disclosure duties.
+- **Articles 8 and 9** - data-recipient terms (Art. 8 fairness conditions) and compensation (Art. 9) sit between data holder and data recipient. Art. 5 transfer is free to the user but the commercial side with the third-party recipient lives in Arts. 8 and 9. Surface this whenever the deliverable touches third-party transfer mechanics.
+- **Article 27** - destination providers also owe good-faith cooperation in switching.
+- **Article 5(1)** - direct user access does not extinguish the Art. 5 third-party-transfer obligation.
+- **Recital 31 final sentence** - Data Act trade-secret refusal does not displace GDPR access rights.
+- **Article 7** - SME and micro-enterprise carve-outs require size and condition checks.
+- **Article 12** - member-state law may extend Chapter II to SMEs in specific sectors.

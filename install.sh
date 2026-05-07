@@ -66,13 +66,6 @@ case "$mode" in
     else
       echo "  [MISSING] python3 not installed (required for scripts)"
     fi
-    if [[ -x "$SCRIPT_DIR/scripts/validate_sources.py" ]] && command -v python3 >/dev/null 2>&1; then
-      if python3 "$SCRIPT_DIR/scripts/validate_sources.py" >/dev/null 2>&1; then
-        echo "  [OK] source coverage: every cited Recital / Article / FAQ Q is present in curated sources"
-      else
-        echo "  [FAIL] source coverage gap — run: python3 $SCRIPT_DIR/scripts/validate_sources.py --verbose"
-      fi
-    fi
     exit 0
     ;;
   install|"")
