@@ -11,7 +11,7 @@ pointing to the Commission's model contractual terms (Recommendation,
 
 **Author:** Ryan Malek
 **Feedback / questions:** [LinkedIn](https://www.linkedin.com/in/theryanmalek/)
-**Distributed via:** Lawvable
+**Distributed via:** Github, Counselcoder.com, Lawvable
 **Project site:** [counselcoder.com](https://counselcoder.com)
 **License:** AGPL-3.0 (see `LICENSE`)
 **This is not legal advice.** See `LICENSE` for the full disclaimer.
@@ -21,7 +21,7 @@ pointing to the Commission's model contractual terms (Recommendation,
 ## Who this is for
 
 In-house counsel and external practitioners advising on EU Data Act
-compliance — including industrial IoT, automotive, medical device,
+compliance, including industrial IoT, automotive, medical device,
 SaaS, financial services, and cloud clients.
 
 The skill assumes the user is a qualified lawyer. It does not explain
